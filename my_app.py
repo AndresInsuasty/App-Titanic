@@ -8,9 +8,9 @@ modelo_lr = joblib.load('modelos_entrenados/logistic_regression.joblib')
 modelo_rf = joblib.load('modelos_entrenados/random_forest.joblib')
 modelo_svc = joblib.load('modelos_entrenados/svc.joblib')
 
-st.title("¿Sobrevivirías al Titanic?")
+st.title("🚢¿Sobrevivirías al Titanic?")
 
-st.write("Completa tus datos para ver si hubieras sobrevivido según distintos modelos de Machine Learning.")
+st.write("Ingresa tus datos y descubre si, viajando al pasado, habrías sobrevivido al Titanic según modelos de Machine Learning.")
 
 nombre = st.text_input("¿Cuál es tu nombre?")
 
@@ -51,8 +51,11 @@ if st.button("¿Sobreviviría?"):
 
     st.subheader(f"Resultados para {nombre if nombre else 'el pasajero'}:")
 
-    for modelo, pred in resultados.items():
+    col1, col2, col3 = st.columns(3)
+    columnas = [col1, col2, col3]
+
+    for (modelo, pred), col in zip(resultados.items(), columnas):
         if pred == 1:
-            st.success(f"{modelo}: ¡Sobrevivirías! 🎉")
+            col.success(f"{modelo}: ¡Sobrevivirías! 🎉")
         else:
-            st.error(f"{modelo}: No sobrevivirías 😢")
+            col.error(f"{modelo}: No sobrevivirías 😢")
