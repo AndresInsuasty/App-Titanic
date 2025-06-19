@@ -56,6 +56,6 @@ if st.button("¿Sobreviviría?"):
 
     for (modelo, pred), col in zip(resultados.items(), columnas):
         if pred == 1:
-            col.success(f"{modelo}: ¡Sobrevivirías! 🎉")
+            col.success(f"¡Sobrevivirías! 🎉. {modelo}")
         else:
-            col.error(f"{modelo}: No sobrevivirías 😢")
+            col.error(f"No sobrevivirías 😢. {modelo}")
