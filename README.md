@@ -29,7 +29,7 @@ Esta aplicación predice la probabilidad de supervivencia de un pasajero del Tit
 
 1. Clona el repositorio:
 ```sh
-git clone https://github.com/tu_usuario/App-Titanic.git
+git clone https://github.com/AndresInsuasty/App-Titanic
 cd App-Titanic
 ```
 
