@@ -41,7 +41,7 @@ pip install -r requirements.txt
 
 Si deseas reentrenar los modelos, ejecuta:
 ```sh
-python [entrenamiento.py](entrenamiento.py)
+python entrenamiento.py
 ```
 Esto generará los archivos .joblib en la carpeta `modelos_entrenados/`
 
@@ -49,7 +49,7 @@ Esto generará los archivos .joblib en la carpeta `modelos_entrenados/`
 Lanza la aplicación web con:
 
 ```sh
-streamlit run [my_app.py](my_app.py)
+streamlit run my_app.py
 ```
 
 Abre el enlace que aparece en la terminal para acceder a la interfaz y probar los modelos.
